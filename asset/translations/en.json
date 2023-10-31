@@ -1,0 +1,16 @@
+{
+  "home": {
+    "title": "Home"
+  },
+  "general": {
+    "button": {
+      "save": "Save {}"
+    },
+    "diaglog": {
+      "version": {
+        "title": "Version",
+        "content": "Versiyon Information"
+      }
+    }
+  }
+}
