@@ -2,7 +2,6 @@ import 'package:architecture_template_v2/feature/home/view/mixin/home_view_mixin
 import 'package:architecture_template_v2/feature/home/view/widget/home_app_bar.dart';
 import 'package:flutter/material.dart';
 
-
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
@@ -10,7 +9,7 @@ class HomeView extends StatefulWidget {
   State<HomeView> createState() => _HomeViewState();
 }
 
-class _HomeViewState extends State<HomeView>  with HomeViewMixin{
+class _HomeViewState extends State<HomeView> with HomeViewMixin {
   @override
   Widget build(BuildContext context) {
     return const HomeAppBar();
