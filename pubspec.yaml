@@ -15,30 +15,33 @@ dependencies:
 
   cupertino_icons: ^1.0.2
 
-  #Core Dependencies
-  kartal: ^3.5.0
-  vexana: ^3.5.4
+  #Core
   equatable: ^2.0.5
+
+  # Network Dependencies
+  vexana: ^3.5.4
+
+  # Config
   json_annotation: ^4.8.1
   envied: ^0.3.0+3
   easy_localization: ^3.0.3
 
-  #Utility
+
+  #U tility
   easy_logger: ^0.0.2
   logger: ^2.0.2+1
+  kartal: ^3.5.0
 
-# dependency_overrides:
-#   cupertino_icons: ^1.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   very_good_analysis: ^5.1.0
   build_runner: ^2.4.6
   flutter_gen: ^5.3.2
-
   flutter_lints: ^3.0.0
+  envied_generator: ^0.3.0+3
+
 
 flutter_launcher_icons:
   android: "launcher_icon"
