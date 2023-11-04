@@ -1,0 +1,5 @@
+include: package:very_good_analysis/very_good_analysis.dart
+
+
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options
