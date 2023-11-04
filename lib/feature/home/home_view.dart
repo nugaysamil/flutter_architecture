@@ -36,8 +36,12 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
                 value: Locales.en,
               );
             },
-            child:
-                const Text(LocaleKeys.general_button_save).tr(args: ['Samil']),
+            child: Text(
+              LocaleKeys.general_button_save,
+              style: Theme.of(context).textTheme.titleLarge,
+            ).tr(
+              args: ['Samil'],
+            ),
           ),
         ],
       ),
