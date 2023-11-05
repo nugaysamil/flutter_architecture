@@ -24,26 +24,28 @@ dependencies:
   # Config
   easy_localization: ^3.0.3
 
-
   #U tility
   easy_logger: ^0.0.2
   logger: ^2.0.2+1
   kartal: ^3.5.0
   google_fonts: ^6.1.0
 
+  #Navigation
+  auto_route: ^7.8.4
+  auto_route_generator: ^7.3.2
+  build_runner: ^2.4.6
+
   widgets:
     path: module/widgets
 
   gen:
-    path: module/gen    
-
+    path: module/gen
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   very_good_analysis: ^5.1.0
   flutter_lints: ^3.0.0
-
 
 flutter_launcher_icons:
   android: "launcher_icon"
@@ -57,5 +59,4 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - asset/translations/
-
+    - asset/translations/
