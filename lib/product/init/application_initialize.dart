@@ -9,7 +9,6 @@ import 'package:kartal/kartal.dart';
 import 'package:logger/logger.dart';
 
 @immutable
-// This class is used to initiliaze the application process
 final class ApplicationInitialize {
   // project basic required initialize
   Future<void> make() async {
@@ -31,7 +30,7 @@ final class ApplicationInitialize {
       // crashlytics log insets here
       // custom service or custom logger insert here
 
-      // Todo: add custom logger
+      // To-do: add custom logger
       Logger().e(
         details.exceptionAsString(),
       );
