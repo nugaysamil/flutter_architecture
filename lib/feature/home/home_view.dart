@@ -3,6 +3,7 @@ import 'package:architecture_template_v2/feature/home/view/widget/home_app_bar.d
 import 'package:architecture_template_v2/product/widget/padding/project_padding.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:gen/gen.dart';
 import 'package:kartal/kartal.dart';
 import 'package:widgets/widgets.dart';
 
@@ -20,12 +21,16 @@ final class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> with HomeViewMixin {
+  List<User> _users = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          SuccessDialog.show(title: 'title', context: context);
+        onPressed: () async {
+          _users = await loginService.users();
+          setState(
+            () {},
+          );
         },
       ),
       appBar: const HomeAppBar(),
@@ -60,13 +65,18 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
           SizedBox(
             height: context.sized.dynamicHeight(0.4),
           ),
-          const Placeholder(),
+         
           Expanded(
-            child: Image.network(
-              ''.ext.randomImage,
+            child: ListView.builder(
+              itemCount: _users.length,
+              itemBuilder: (BuildContext context, int index) {
+                return ListTile(
+                  title: Text(_users[index].userId.toString()),
+                  subtitle: Text(_users[index].body.toString()),
+                );
+              },
             ),
           ),
-          const Expanded(child: Placeholder()),
         ],
       ),
     );

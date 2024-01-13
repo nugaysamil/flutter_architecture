@@ -1,21 +1,22 @@
 import 'package:architecture_template_v2/feature/home/home_view.dart';
+import 'package:architecture_template_v2/product/services/login_service.dart';
 import 'package:architecture_template_v2/product/services/manager/product_network_error.dart';
-import 'package:architecture_template_v2/product/services/manager/product_service_manager.dart';
+import 'package:architecture_template_v2/product/state/container/product_state_items.dart';
 import 'package:flutter/material.dart';
 
 // Manage your home view business
 
 mixin HomeViewMixin on State<HomeView> {
-  late final ProductNetworkManager productNetworkManager;
+  late final LoginService loginService;
   late final ProductNetworkErrorManager productNetworErrorManager;
 
   @override
   void initState() {
     super.initState();
-    productNetworkManager = ProductNetworkManager.base();
+    loginService = LoginService(ProductStateItems.productNetworkManager);
     productNetworErrorManager = ProductNetworkErrorManager(context);
 
-    productNetworkManager.listenErrorState(
+    ProductStateItems.productNetworkManager.listenErrorState(
       onErrorStatus: productNetworErrorManager.handleError,
     );
   }
