@@ -43,7 +43,7 @@ final class ApplicationInitialize {
   }
 
   void _productEnvironmentWithContainer() {
-     AppEnvironment.general();
+    AppEnvironment.general();
     ProductContainer.setup();
   }
 }

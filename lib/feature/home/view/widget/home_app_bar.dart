@@ -1,13 +1,36 @@
+// ignore_for_file: public_member_api_docs
+
+import 'package:architecture_template_v2/feature/home/view/state/home_state.dart';
+import 'package:architecture_template_v2/feature/home/view/view_model/home_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return AppBar(
+      actions: const [
+        _Loading(),
+      ],
+    );
   }
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+}
+
+class _Loading extends StatelessWidget {
+  const _Loading();
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<HomeViewModel, HomeState>(
+      builder: (context, state) {
+        if (!state.isLoading) return const SizedBox.shrink();
+        return const CircularProgressIndicator.adaptive();
+      },
+    );
+  }
 }
