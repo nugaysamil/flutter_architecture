@@ -8,6 +8,15 @@ class ProductState extends Equatable {
 
   final ThemeMode themeMode;
 
+
   @override
   List<Object?> get props => [];
+
+  ProductState copyWith({
+    ThemeMode? themeMode,
+  }) {
+    return ProductState(
+      themeMode: themeMode ?? this.themeMode,
+    );
+  }
 }

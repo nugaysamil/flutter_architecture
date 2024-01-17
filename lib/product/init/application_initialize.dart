@@ -1,3 +1,5 @@
+// ignore_for_file: public_member_api_docs, flutter_style_todos
+
 import 'dart:async';
 
 import 'package:architecture_template_v2/product/init/config/app_environment.dart';
@@ -24,7 +26,7 @@ final class ApplicationInitialize {
     await EasyLocalization.ensureInitialized();
     EasyLocalization.logger.enableLevels = [LevelMessages.error];
     await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-    // TODO: Splach
+    // TODO: Splash
     await DeviceUtility.instance.initPackageInfo();
 
     FlutterError.onError = (details) {

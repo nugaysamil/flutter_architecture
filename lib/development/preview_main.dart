@@ -1,5 +1,6 @@
 import 'package:architecture_template_v2/product/init/application_initialize.dart';
 import 'package:architecture_template_v2/product/init/product_localization.dart';
+import 'package:architecture_template_v2/product/init/state_initialize.dart';
 import 'package:architecture_template_v2/product/init/theme/custom_dark_theme.dart';
 import 'package:architecture_template_v2/product/init/theme/custom_light_theme.dart';
 import 'package:architecture_template_v2/product/navigation/app_router.dart';
@@ -12,7 +13,8 @@ Future<void> main() async {
   await ApplicationInitialize().make();
   runApp(
     DevicePreview(
-      builder: (context) => ProductLocalization(child: const _MyApp()),
+      builder: (context) =>
+          StateInitialize(child: ProductLocalization(child: const _MyApp())),
     ),
   );
 }

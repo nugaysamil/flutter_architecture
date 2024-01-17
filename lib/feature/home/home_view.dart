@@ -31,6 +31,7 @@ class _HomeViewState extends BaseState<HomeView> with HomeViewMixin {
       child: Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: () async {
+            productViewModel.changeThemeMode(ThemeMode.dark);
             await homeViewModel.fetchUsers();
           },
         ),
