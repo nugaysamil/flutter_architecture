@@ -7,7 +7,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:gen/gen.dart';
 import 'package:vexana/vexana.dart';
 
-void main() {
+import '../hive/hive_common_test.dart';
+
+void main() async {
   late final ProductNetworkManager manager;
   setUp(() {
     AppEnvironment.general();
