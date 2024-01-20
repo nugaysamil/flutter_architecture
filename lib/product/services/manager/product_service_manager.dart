@@ -1,3 +1,5 @@
+// ignore_for_file: comment_references, public_member_api_docs
+
 import 'dart:io';
 
 import 'package:architecture_template_v2/product/init/config/app_environment.dart';

@@ -1,4 +1,4 @@
-// ignore_for_file: public_member_api_docs, lines_longer_than_80_chars
+// ignore_for_file: public_member_api_docs, lines_longer_than_80_chars, avoid_renaming_method_parameters
 
 import 'package:architecture_template_v2/core/src/cache/cache_model.dart';
 import 'package:architecture_template_v2/core/src/cache/cache_operation.dart';

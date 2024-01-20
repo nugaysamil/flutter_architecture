@@ -40,6 +40,8 @@ final class ApplicationInitialize {
     };
     _productEnvironmentWithContainer();
 
+    await ProductStateItems.productCache.init();
+
     // Dependency initialize
     // Envied
   }
